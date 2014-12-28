@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,700,700italic|Open+Sans+Condensed:300,700' rel="stylesheet" type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Cabin+Sketch:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" media="screen" href="vender/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen" href="style/css/style.css">
+  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http://www.google.com/jsapi"></script>
+  <!-- <script type="text/javascript" src="style/js/masonry.js"></script> -->
+  <script type="text/javascript" src="style/js/scripts.js"></script>
+  <script type="text/javascript" src="style/js/turnBox.js"></script>
+  <style>
+
+
+  </style>
+</head>
+<body>
+  <div class="main-wrapper">
+    <h1><a href="">TECH SPACE</a></h1>
+    <div id="fixed">
+      <div class="tabs">
+        <div class="tab tab-1">
+          <div>
+            <p class="turnBoxButton turnBoxNext">厳選記事</p>
+          </div>
+          <div>
+            <p>厳選記事</p>
+          </div>
+        </div>
+        <div class="tab tab-2">
+          <div>
+            <p class="turnBoxButton turnBoxNext">ドキュメント</p>
+          </div>
+          <div>
+            <p>ドキュメント</p>
+          </div>
+        </div>
+        <div class="tab tab-3">
+          <div>
+            <p class="turnBoxButton turnBoxNext">このサイトについて</p>
+          </div>
+          <div>
+            <p>このサイトについて</p>
+          </div>
+        </div>
+      </div>
+      <div class="content-box">
+        <div class="bg1 scroll-js">
+          <div id="topics"></div>
+        </div>
+        <div class="content bg2 scroll-js">
+          <h2>オープンソースな日本一のプログラミングドキュメントを作る！</h2>
+          <p class="top-text">
+          TECH LOGICS 開発者養成ドキュメントは<span class="fw800">github</span>にてオープンソースに開発しております。<br>
+          このドキュメントはTECH LOGICSメンバーに関わらず、<br>
+          <span class="fw800">修正点や改善点、追加</span>がございましたらお気軽にお声掛けください。<br><br>
+          また、誰もがいつでも<span class="fw800">「Pull Request」</span>を送れるように<span class="fw800">github</span>にしておりますので<br>
+          皆さんの<span class="fw800">Pull Request</span>で一層、このプログラミングドキュメントをより良いものにしていけると有難いです。
+          </p>
+          <a class="web doc-link" href="https://github.com/techlogics/WEB_Document" target="_blank">WEB - ドキュメント</a>
+          <a class="ios doc-link" href="https://github.com/techlogics/iOS_Document" target="_blank">iOS - ドキュメント</a>
+          <a class="android doc-link" href="https://github.com/techlogics/android_Document" target="_blank">Android - ドキュメント</a>
+          <a class="git doc-link" href="https://github.com/techlogics/git_Document" target="_blank">Git - ドキュメント</a>
+        </div>
+        <div class="content bg3 scroll-js">
+          <p class="about-inner">
+          TECH SPACE(テックスペース)はプログラミングコミュニティTECH LOGICS（以下「ロジックス」）のメンバーが主に利用するサイトとして存在すると共に、多くのエンジニア、これからプログラミングを始める方の情報ツールとして利用してもらえれると幸いです。<br><br>
+          中高生から社会人までといった年齢や技術に関係なく、プログラマ同士が繋がるためのコミュニティであるロジックスは様々な形でこれからも技術を駆使していきたいと思います。<br><br>
+          今後とも本サイトをよろしくお願い致します。<br><br>
+          <a class="fw800" href="http://techlogics.link" target="_blank">プログラミングコミュニティTECH LOGICS</a><br>
+          及び<br>
+          <a class="fw800" href="http://farconnection.co.jp" target="_blank">株式会社Far Connection</a>
+          </p>
+        </div>
+      </div>
+      <div class="social">
+        <p>←</p>
+        <div class="social-area">
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+    $(window).resize(function() {
+        
+      var tab_width = $(window).width()/3;
+      var content_width = $(window).width();
+      var content_height = $(window).height();
+      var duration = 350;
+      var tab_box_class = $(".tab");
+      var content_box_class = $(".content-box");
+
+      tab_box_class.turnBox({
+        width: tab_width,
+        height: 60,
+        perspective: 300,
+        duration: duration,
+        easing: "ease-in-out"
+      });
+
+      content_box_class.turnBox({
+        width: content_width,
+        height: content_height,
+        perspective: 1300,
+        duration: duration,
+        easing: "ease-in-out",
+        type: "skip",
+        axis: "y"
+      });
+
+      for(i = 0; i < tab_box_class.length; i++) {
+        var num = i + 1;
+        $(".tab.tab-" + num).turnBoxLink(
+        {
+          box: ".content-box",
+          dist: num,
+          events: "click"
+        });
+      };
+
+      $.each($(".tabs").children(), function(key)
+      {
+        var tab = key + 1;
+
+        $(".tab.tab-" + tab).find(".turnBoxButton").on("click", function()
+        {
+          $(".tab").not(".tab-" + tab).turnBoxAnimate();
+        });
+      });
+
+      $(".tab.tab-1").turnBoxAnimate(
+      {
+        face: 2,
+        animation: false
+      });
+    });
+
+    var tab_width = $(window).width()/3;
+    var content_width = $(window).width();
+    var content_height = $(window).height();
+    var duration = 350;
+    var tab_box_class = $(".tab");
+    var content_box_class = $(".content-box");
+
+    tab_box_class.turnBox({
+      width: tab_width,
+      height: 60,
+      perspective: 300,
+      duration: duration,
+      easing: "ease-in-out"
+    });
+
+    content_box_class.turnBox({
+      width: content_width,
+      height: content_height,
+      perspective: 1300,
+      duration: duration,
+      easing: "ease-in-out",
+      type: "skip",
+      axis: "y"
+    });
+
+    for(i = 0; i < tab_box_class.length; i++) {
+      var num = i + 1;
+      $(".tab.tab-" + num).turnBoxLink(
+      {
+        box: ".content-box",
+        dist: num,
+        events: "click"
+      });
+    };
+
+    $.each($(".tabs").children(), function(key)
+    {
+      var tab = key + 1;
+
+      $(".tab.tab-" + tab).find(".turnBoxButton").on("click", function()
+      {
+        $(".tab").not(".tab-" + tab).turnBoxAnimate();
+      });
+    });
+
+    $(".tab.tab-1").turnBoxAnimate(
+    {
+      face: 2,
+      animation: false
+    });
+
+    // $("body").height($(window).height());
+    // $(".content-box").height($(window).height()-60);
+
+    $(function(){
+      var box = $("#fixed");
+      var content_box_class = $(".scroll-js");
+      var boxTop = box.offset().top;
+      $(window).scroll(function () {
+          if($(window).scrollTop() >= boxTop) {
+              content_box_class.addClass("scroll");
+              $(".tab").addClass("fixed");
+          } else {
+              content_box_class.removeClass("scroll");
+          }
+      });
+  });
+
+
+  </script>
+
+</body>
+</html>
