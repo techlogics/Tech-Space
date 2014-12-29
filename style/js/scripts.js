@@ -4,32 +4,38 @@
 
 
 // 初期設定
-var disp_entry_count = 20;       //表示させたい記事の数
+var disp_entry_count = 30;       //表示させたい記事の数
 
 // RSS URL
 var site = new Array();
 
 site[0] = {
-    title:'GIZUMODO',
-    url:'http://feeds.gizmodo.jp/rss/gizmodo/index.xml',
+    title:'Aratana 24ｈ',
+    url:'http://24h.aratana.jp/?feed=rss2',
     disp_entry:4        // 取得する記事の数
 };
 
 site[1] = {
-    title:'Gigazin',
-    url:'http://feed.rssad.jp/rss/gigazine/rss_2.0',
+    title:'NxWorld',
+    url:'http://www.nxworld.net/feed/',
     disp_entry:4        // 取得する記事の数
 };
 
 site[2] = {
-    title:'ウェブソク',
-    url:'http://news.7zz.jp/feed',
+    title:'dotHTML5',
+    url:'http://feeds.feedburner.com/dotHTML5?format=xml',
     disp_entry:4        // 取得する記事の数
 };
 
 site[3] = {
     title:'コリス',
     url:'http://coliss.com/feed',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[4] = {
+    title:'株式会社LIG',
+    url:'http://liginc.co.jp/feed',
     disp_entry:4        // 取得する記事の数
 };
 

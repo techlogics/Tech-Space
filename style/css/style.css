@@ -35,6 +35,9 @@ a {
 a:hover{
   color: #177091;
 }
+#fixed{
+  /*position: absolute;*/
+}
 h1 {
   display: block;
   width: 100%;
@@ -66,6 +69,7 @@ font-weight: 800;
 }
 .tabs {
   display: inline-block;
+  z-index: 500;
 }
 
 .tab {
@@ -73,6 +77,8 @@ font-weight: 800;
   font-weight: 800;
   color: #fff;
   float: left;
+  z-index: 500;
+  top: 0;
 }
 
 .tab:last-child {
@@ -121,7 +127,7 @@ font-weight: 800;
   color: #3f3f3f;
   margin: -3px auto 0;
   -webkit-text-size-adjust: 100%;
-  /*overflow : scroll;*/
+  overflow : scroll;
 }
 .content-box.turnBoxCurrentFace1 > .turnBoxFaceNum1, .content-box.turnBoxCurrentFace2 > .turnBoxFaceNum2, .content-box.turnBoxCurrentFace3 > .turnBoxFaceNum3 {
   background-color: #e2e2e2;
@@ -129,13 +135,10 @@ font-weight: 800;
 .content-box .turnBoxFace {
   background-color: #afafaf;
 }
-.content-box > .turnBoxFace {
-  position: fixed !important;
-}
 
 #topics {
   /*height: 300px;*/
-  /*overflow: scroll;*/
+  overflow: scroll;
   text-align: center;
   background: #DDD;
 }
@@ -209,7 +212,7 @@ h4 {
   line-height: 1.5;
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
-  /*overflow : scroll;*/
+  overflow : scroll;
   /*position: fixed;*/
 }
 .top-text{
@@ -296,15 +299,14 @@ h4 {
   font-weight: 800;
 }
 .social{
-  position: absolute;
-  bottom: 30px;
-  right: 10px;
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
   background: #333;
-  padding: 10px;
   border-radius: 50%;
   width: 100px;
   height: 100px;
-  z-index: 500;
+  z-index: 900;
   display: table;
   -webkit-transition: all .25s ease;
      -moz-transition: all .25s ease;
@@ -318,7 +320,7 @@ h4 {
 }
 .social:hover .social-area{
   opacity: 1;
-  width: 1000px;
+  width: 200%;
   height: 400px;
   right: 0;
   bottom: 0;
@@ -326,7 +328,7 @@ h4 {
 .social-area{
   opacity: 0;
   position: absolute;
-  width: 300px;
+  width: 0px;
   height: 0px;
   right: -10%;
   bottom: -10%;
@@ -337,13 +339,6 @@ h4 {
       -ms-transition: all .25s ease;
        -o-transition: all .25s ease;
           transition: all .25s ease;
-}
-.scroll {
-  overflow: scroll;
-}
-.fixed{
-  position: fixed;
-  top: 0;
 }
 
 @media screen and (max-width: 900px){
