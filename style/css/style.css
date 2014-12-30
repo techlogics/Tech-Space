@@ -198,7 +198,7 @@ h3 img {
   width: 100%;
 }
 .img-height{
-  height: 150px;
+  max-height: 150px;
   margin-bottom: 10px;
   overflow: hidden;
 }
