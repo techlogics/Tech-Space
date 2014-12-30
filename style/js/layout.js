@@ -117,14 +117,16 @@ $(function(){
         // スクロール位置が100を超えた場合
         if ($(this).scrollTop() >= pos.top-3) {
             // 「ページトップへ」をフェードイン
-            $('.go-bottom').fadeOut();
+            // $('.go-bottom').fadeOut();
+            $('.go-bottom').css("display","none");
             $('.go-top').fadeIn();
         }
         // スクロール位置が100以下の場合
         else {
             // 「ページトップへ」をフェードアウト
+            $('.go-top').css("display","none");
             $('.go-bottom').fadeIn();
-            $('.go-top').fadeOut();
+//             $('.go-top').fadeOut();
         }
     });
  
