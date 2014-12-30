@@ -88,6 +88,7 @@ font-weight: 800;
 .tab p {
   line-height: 3;
   cursor: pointer;
+  font-family: "ヒラギノ丸ゴ ProN","Hiragino Maru Gothic ProN","メイリオ","Meiryo";
 }
 
 .tab.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
@@ -298,41 +299,101 @@ h4 {
 .fw800{
   font-weight: 800;
 }
-.social{
+.go-top{
   position: fixed;
   bottom: 2%;
   right: 2%;
-  background: #333;
+  background: #111;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   z-index: 900;
   display: table;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #AAA;
   -webkit-transition: all .25s ease;
      -moz-transition: all .25s ease;
       -ms-transition: all .25s ease;
        -o-transition: all .25s ease;
           transition: all .25s ease;
 }
-.social p{
+.go-bottom {
+  position: fixed;
+  bottom: 2%;
+  right: 2%;
+  background: #111;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  z-index: 900;
+  display: table;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px #AAA;
+  -webkit-transition: all .25s ease;
+     -moz-transition: all .25s ease;
+      -ms-transition: all .25s ease;
+       -o-transition: all .25s ease;
+          transition: all .25s ease;
+}
+.go-top p,
+.go-bottom p{
   vertical-align: middle;
   display: table-cell;
 }
-.social:hover .social-area{
-  opacity: 1;
-  width: 200%;
-  height: 400px;
-  right: 0;
-  bottom: 0;
+.go-top span,
+.go-bottom span{height:50px; width:50px; display:block; position:relative;} 
+
+.top-icon,
+.bottom-icon{
+  overflow:hidden;
+  height:25px;
+}
+
+.top-icon:before{
+  content: '';
+  height: 15px;
+  width: 15px;
+  display: block;
+  border: 5px solid #FFF;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  position: absolute;
+  top: 19px;
+  left: 15px;
+}
+
+.bottom-icon:before{
+  content: '';
+  height: 15px;
+  width: 15px;
+  display: block;
+  border: 5px solid #FFF;
+  border-left-width: 0;
+  border-bottom-width: 0;
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  position: absolute;
+  top: 11px;
+  left: 15px;
+}
+
+
+.go-top:hover,
+.go-bottom:hover {
+  opacity: 0.6;
 }
 .social-area{
-  opacity: 0;
   position: absolute;
-  width: 0px;
-  height: 0px;
-  right: -10%;
-  bottom: -10%;
-  background: #AAA;
+  right: 1%;
+  top: 3%;
   z-index: 900;
   -webkit-transition: all .25s ease;
      -moz-transition: all .25s ease;
@@ -386,6 +447,9 @@ h4 {
     width: 85%;
     padding: 5% 0;
   }
+  .social-area img {
+    width: 160px;
+  }
 }
 @media screen and (max-width: 640px){
   .c_article {
@@ -396,5 +460,10 @@ h4 {
   }
   .content-box{
     font-size: 14px;
+  }
+  .tab-3 p {
+    font-size: 100%;
+    padding-top: 13px;
+    line-height: 1;
   }
 }

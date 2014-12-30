@@ -12,7 +12,7 @@
   <script type="text/javascript" src="style/js/scripts.js"></script>
   
   </head>
-<body style="visibility:hidden" onLoad="document.body.style.visibility='visible'">
+<body id="body" style="visibility:hidden" onLoad="document.body.style.visibility='visible'">
   <div class="main-wrapper">
     <h1><a href="">TECH SPACE</a></h1>
       <div id="fixed">
@@ -71,12 +71,14 @@
             </p>
           </div>
         </div>
-        <div class="social">
-          <p>←</p>
-          <div class="social-area">
-
-          </div>
+        <div class="go-top">
+          <span class="top-icon"></span>
         </div>
+        <div class="go-bottom">
+          <span class="bottom-icon"></span>
+        </div>
+        <div class="social-area">
+            <a href="http://twitter.com/share?url=http://localhost:8080/git_logics/matome/index.html&text=TECH SPACE&via=techandlogics"><img src="images/twitter.png" alt="Scriptが読み込まれなかった場合に表示される文字" /></a>
       </div>
     </div>
   </div>
@@ -84,6 +86,7 @@
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="style/js/turnBox.js"></script>
   <script type="text/javascript" src="style/js/layout.js"></script>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
 </body>
