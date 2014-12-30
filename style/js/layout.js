@@ -113,8 +113,9 @@ $(function(){
  
     // スクロールした場合
     $(window).scroll(function(){
+        var pos = $("#fixed").position();
         // スクロール位置が100を超えた場合
-        if ($(this).scrollTop() > 10) {
+        if ($(this).scrollTop() >= pos.top-3) {
             // 「ページトップへ」をフェードイン
             $('.go-bottom').fadeOut();
             $('.go-top').fadeIn();
