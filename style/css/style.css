@@ -150,8 +150,8 @@ font-weight: 800;
   background: #FFF;
   display: inline-block;
   text-align: left;
-  overflow: scroll;
-  /*padding: 2% 2%;*/
+  overflow: hidden;
+  padding: 1%;
   -webkit-overflow-scrolling : touch;
   letter-spacing: normal;
   border-bottom: 1px solid #B3B3B3;
@@ -193,6 +193,14 @@ h3 img {
 }
 .page-img{
   margin-bottom: 5%;
+}
+.a_img{
+  width: 100%;
+}
+.img-height{
+  height: 150px;
+  margin-bottom: 10px;
+  overflow: hidden;
 }
 h4 {
   font-size: 20px;

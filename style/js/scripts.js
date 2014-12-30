@@ -4,7 +4,7 @@
 
 
 // 初期設定
-var disp_entry_count = 30;       //表示させたい記事の数
+var disp_entry_count = 32;       //表示させたい記事の数
 
 // RSS URL
 var site = new Array();
@@ -22,8 +22,8 @@ site[1] = {
 };
 
 site[2] = {
-    title:'dotHTML5',
-    url:'http://feeds.feedburner.com/dotHTML5?format=xml',
+    title:'TechCrunch',
+    url:'http://jp.techcrunch.com/feed/',
     disp_entry:4        // 取得する記事の数
 };
 
@@ -38,6 +38,43 @@ site[4] = {
     url:'http://liginc.co.jp/feed',
     disp_entry:4        // 取得する記事の数
 };
+
+site[5] = {
+    title:'SEO Japan',
+    url:'http://www.seojapan.com/blog/2014-gdn',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[6] = {
+    title:'HTML5Experts.jp',
+    url:'http://html5experts.jp/feed/',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[7] = {
+    title:'ドットインストール - 新着レッスン',
+    url:'http://dotinstall.com/lessons.rss',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[8] = {
+    title:'DesignDevelop',
+    url:'http://feeds.feedburner.com/design-develop/BZkU',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[9] = {
+    title:'Developers.IO',
+    url:'http://dev.classmethod.jp/matome/feed/',
+    disp_entry:4        // 取得する記事の数
+};
+
+site[10] = {
+    title:'creive【クリーブ】',
+    url:'http://creive.me/feed/',
+    disp_entry:4        // 取得する記事の数
+};
+
 
 var channel = new Array();
 var entry = new Array();
@@ -90,11 +127,10 @@ function init() {
                     entry['date'] = yy + "年" + mm + "月" + dd + "日";
 
                     entry['img'] = entry['content'].match(/src="(.*?)"/igm);
-
                     if (entry['img'] != null) {
                         for (var k=0; k<entry['img'].length; k++){
                             entry['img'][k] = entry['img'][k].replace(/src=/ig, "");
-                            entry['img'][k] = entry['img'][k].replace(/"/ig, "");
+                            entry['img'][k] = entry['img'][k].replace(/\"/ig, "");
                         }
                     }
                     entries.push(entry);
@@ -120,10 +156,15 @@ function disp() {
                     + '<span>'
                     + entries[l]['site_title'] + '</span></h3></a>'
                     + '<p class="date">'
-                    + entries[l]['date'] + '</p>';
-                    // if (entries[l]['img'] != null) { Feed += '<img class="a_img" src="' + entries[l]['img'][0] + '">'; }
-                    if (entries[l]['img'] != null) { Feed += '<img class="page-img" width="100%" src="' + entries[l]['img'][0] + '">';}
-                    Feed += '<a href="'+ entries[l]['link'] + '" target="_blank">'
+                    + entries[l]['date'] + '</p><div class="img-height">';
+
+                    if (entries[l]['img'] != null) {
+                        Feed += '<img class="a_img" src="' + entries[l]['img'][0] + '">';
+                    } else {
+                        Feed += '<img class="a_img" src="http://techspace.link/images/no-image.png">';
+                    }
+
+                    Feed += '</div><a href="'+ entries[l]['link'] + '" target="_blank">'
                     + '<h4>'
                     + entries[l]['title']
                     + '</h4>'
@@ -132,55 +173,8 @@ function disp() {
     }
     // 表示するタグに追加
     $('#topics').append( Feed );
-    // $(".c_article").height($(".c_article").height());
-    // });
-
-    // $(".c_article").each(function(){
-    //     $(this).height($(this).height());
-    // });
-    // $('#topics').masonry({
-    //     itemSelector: '.c_article',
-    //     columnWidth: 200, //一列の幅サイズを指定
-    //     // isAnimated: true,
-    //     // duration: 400,
-    //     isFitWidth: true
-    // });
 }
 
 google.setOnLoadCallback(init);
 
 
-// $(".c_article").each(function(){
-//     $(this).height($(this).height());
-// });
-
-var showFlag = false;
-var topBtn = $('#page-top');
-topBtn.css('bottom', '-100px');
-var showFlag = false;
-//スクロールが100に達したらボタン表示
-$(window).scroll(function () {
-    if ($(this).scrollTop() > 100) {
-        if (showFlag == false) {
-            showFlag = true;
-            topBtn.stop().animate({'bottom' : '20px'}, 200);
-        }
-    } else {
-        if (showFlag) {
-            showFlag = false;
-            topBtn.stop().animate({'bottom' : '-100px'}, 200);
-        }
-    }
-});
-//スクロールしてトップ
-topBtn.click(function () {
-    $('body,html').animate({
-        scrollTop: 0
-    }, 500);
-    return false;
-});
-
-    // $('#topics').masonry({
-    //   itemSelector: '.c_article',
-    //   columnWidth: 200 //一列の幅サイズを指定
-    // });
