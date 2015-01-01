@@ -75,6 +75,13 @@ site[10] = {
     disp_entry:4        // 取得する記事の数
 };
 
+site[11] = {
+    title:'エンジニアtype',
+    url:'http://engineer.typemag.jp/feed',
+    disp_entry:4        // 取得する記事の数
+};
+
+
 
 var channel = new Array();
 var entry = new Array();

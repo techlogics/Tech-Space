@@ -302,7 +302,7 @@ h4 {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  z-index: 900;
+  z-index: 999;
   display: table;
   cursor: pointer;
   box-shadow: 1px 1px 3px #AAA;
@@ -320,7 +320,7 @@ h4 {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  z-index: 900;
+  z-index: 999;
   display: table;
   cursor: pointer;
   box-shadow: 1px 1px 3px #AAA;
@@ -408,11 +408,13 @@ h4 {
   bottom: 0px;
   left: 50%;
   margin-left: -320px;
+  z-index: 300;
 }
 .adsbygoogle {
   display: inline-block;
   width: 728px;
   height: 90px;
+  z-index: 300;
 }
 
 inc {
@@ -488,17 +490,11 @@ inc {
   }
   .adsbygoogle {
     width: 100% !important;
+    height: 50px;
+    z-index: 0;
   }
-  .adsbygoogle iframe {
-    width: 100%;
-  }
-  #google_image_div {
-    width: 100%;
-  }
-  #google_ads_frame1 {
-    width: 100%;
-  }
-  #google_image_div {
-    width: 100%;
-  }
+  .go-top,
+  .go-bottom {
+    bottom: 53px;
+  } 
 }
