@@ -9,10 +9,11 @@ $(function(){
    var tab = $('.side-bar'),
    offset = tab.offset();
    $(window).scroll(function () {
-     if($(window).scrollTop() > offset.top) {
+     if($(window).scrollTop() > offset.top-70) {
        tab.addClass('fixed');
      } else {
        tab.removeClass('fixed');
      }
    });
+
 });

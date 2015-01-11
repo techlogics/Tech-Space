@@ -45,7 +45,8 @@ h1 {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin: 80px auto 50px;
+  margin-top: 80px;
+  margin-bottom: 50px;
 }
 h1 a {
   color: #F3FF88;
@@ -63,19 +64,20 @@ h1 span {
   right: 50%;
   bottom: -70px;
   margin-right: -300px;
+
 }
 h2 {
   display: block;
   font-size: 30px;
-  line-height: 120%;
+  line-height: 110%;
   text-shadow: 1px 1px 3px #FFF;
   font-weight: 800;
-  margin: 40px 0 20px;
+  margin: 40px 0 10px;
 }
 h3 {
   font-size: 30px;
-  line-height: 150%;
 }
+
 #header {
   width: 100%;
   background: #FFF;
@@ -84,6 +86,9 @@ h3 {
   position: fixed;
   z-index: 300;
   font-family: 'Cabin Sketch', cursive;
+}
+.gnav {
+
 }
 .gnav li {
   display: inline-block;
@@ -114,9 +119,7 @@ h3 {
 .top-title {
   font-size: 30px;
   font-weight: 800;
-  margin: 0;
   padding: 20px 35px;
-  text-shadow: 1px 1px 1px #333;
   background: rgba(71,71,71,1);
   background: -moz-radial-gradient(center, ellipse cover, rgba(71,71,71,1) 0%, rgba(19,19,19,1) 100%);
   background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(71,71,71,1)), color-stop(100%, rgba(19,19,19,1)));
@@ -129,46 +132,14 @@ h3 {
 .main {
   background: #FFF;
   color: #333;
-  padding: 50px 35px 100px;
+  padding: 20px 35px;
 }
 .fixed {
   position: fixed;
   top: 80px;
   width: 360px;
 }
-.main hr {
-  margin: 3em 0;
-}
-.main li {
-  list-style-type: circle;
-  list-style-position: inside;
-  margin: 1em;
-}
-.main p ,
-.main li ,
-.main a {
-  line-height: 1.5;
-}
-.hljs {
-  border-radius: 3px;
-}
-.main pre {
-  margin: 20px 0;
-}
-.main h2 {
-  background: url(../../images/light.png) no-repeat 0px -1px;
-  background-size: 35px;
-  padding-left: 40px;
-}
-.main h1 {
-  width: auto;
-  font-family: sans-serif;
-  font-size: 30px;
-  font-weight: 800;
-  margin: 0 0 10px;
-  line-height: 40px;
-  text-align: left;
-}
+
 
 
 #side {
@@ -191,24 +162,8 @@ h3 {
 }
 .side-bar li {
   border-bottom: 1px solid #cccccc;
-  padding: 6px;
-  list-style-type: circle;
-  list-style-position: inside;
 }
-.side-bar li ul li {
-  border-bottom: 1px dotted #cccccc;
-}
-.side-bar li ul li:last-child {
-  border: none;
-}
-.side-bar li ul {
-  margin: 10px 0 0 5px;
-}
-.side-title {
-  font-size: 18px;
-  font-weight: 800;
-  text-shadow: 1px 1px 1px rgba(51, 51, 51, 0.2);
-}
+
 
 
 .go-top {
@@ -326,7 +281,6 @@ h3 {
   left: 50%;
   margin-left: -320px;
   z-index: 300;
-  display: none;
 }
 .adsbygoogle2 {
   display: inline-block;
@@ -345,13 +299,6 @@ h3 {
 inc {
   background: none;
 }
-
-
-#doc h1 span {
-  color: #FF3131;
-}
-
-
 
 @media screen and (max-width: 900px){
   .content-wrapper {
@@ -396,7 +343,6 @@ inc {
     bottom: 0;
     left: 0;
     margin-left: 0;
-    display: block;
   }
   .adsbygoogle {
     width: 100% !important;
