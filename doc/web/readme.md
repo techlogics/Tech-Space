@@ -1,21 +1,21 @@
 
-## [文法](https://github.com/techlogics/WEB_Document/blob/master/grammar.md)
+## [文法](grammer/)
 * 初めて触る人向け/欠けている基礎的知識を補う
 
 
-## [開発フロー/運用/保守性](https://github.com/techlogics/WEB_Document/blob/master/operation.md)
+## [開発フロー/運用/保守性](operation/)
 * 開発の流れ、運用向けのコーディング方法
 
 
-## [よく使う実践的コード](https://github.com/techlogics/WEB_Document/blob/master/useful.md)
+## [よく使う実践的コード](useful/)
 * よく躓いたりすることなど、案件をしてわからなくなってもこれ見ながらできるようにする
 
 
-## [ライブラリ](https://github.com/techlogics/WEB_Document/blob/master/library.md)
+## [ライブラリ](library/)
 * どれがどの役割をできるかの確認
 
 
-## [ブラウザ/デザイン/エディター/ツール](https://github.com/techlogics/WEB_Document/blob/master/subtheme.md)
+## [ブラウザ/デザイン/エディター/ツール](subtheme/)
 * 作業効率やエディタ周りの環境づくり
 
 
@@ -24,8 +24,8 @@
 
 ### 他のドキュメントもご覧ください  
 
-##[iOS](https://github.com/techlogics/iOS_Document)  
+##[iOS](../ios/)  
 
-##[Android](https://github.com/techlogics/Android_Document)  
+##[Android](../android/)  
 
-##[Git](https://github.com/techlogics/Git_Document)
+##[Git](../git/)
