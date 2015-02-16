@@ -48,11 +48,11 @@ h1 {
   margin-bottom: 50px;
 }
 h1 a {
-  color: #F3FF88;
+  color: #50e3c2;
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
 }
 h1 a:hover {
-  color: #F3FF88;
+  color: #379681;
   text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.9);
 }
 h2 {
@@ -92,22 +92,22 @@ h2 {
 }
 
 .tab.turnBoxCurrentFace1 > .turnBoxFaceNum1 {
-  background-color: #3f3f3f;
+  background-color: #2CFF9F;
 }
 
 .tab.turnBoxCurrentFace1 > .turnBoxFaceNum1:hover {
-  background-color: #373737;
+  background-color: #20CA7C;
 }
 .tab-1.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
-  background: #FAF34C;
+  background: #FAFF38;
   text-shadow: 1px 1px 3px #AAA;
 }
 .tab-2.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
-  background: #F76666;
+  background: #FF5F5F;
   text-shadow: 1px 1px 3px #AAA;
 }
 .tab-3.turnBoxCurrentFace2 > .turnBoxFaceNum2 {
-  background: #0094ef;
+  background: #42B7FF;
   text-shadow: 1px 1px 3px #AAA;
 }
 
@@ -274,20 +274,20 @@ h4 {
   color: #F4315E;
 }
 .bg1 {
-  border-top: 3px solid #FAF34C;
+  border-top: 3px solid #FAFF38;
 }
 .bg2 {
-  border-top: 3px solid #FF4F4F;
-  border-left: 20px solid #FF4F4F;
-  border-right: 20px solid #FF4F4F;
-  border-bottom: 20px solid #FF4F4F;
+  border-top: 3px solid #FF5F5F;
+  border-left: 20px solid #FF5F5F;
+  border-right: 20px solid #FF5F5F;
+  border-bottom: 20px solid #FF5F5F;
   box-sizing: border-box;
 }
 .bg3 {
-  border-top: 3px solid #0094ef;
-  border-left: 20px solid #0094ef;
-  border-right: 20px solid #0094ef;
-  border-bottom: 20px solid #0094ef;
+  border-top: 3px solid #42B7FF;
+  border-left: 20px solid #42B7FF;
+  border-right: 20px solid #42B7FF;
+  border-bottom: 20px solid #42B7FF;
   box-sizing: border-box;
 }
 
